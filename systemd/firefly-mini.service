@@ -1,0 +1,19 @@
+[Unit]
+Description=Firefly Mini Autonomous Cyber-Cat Desktop Agent & Defense Sentinel
+Documentation=https://github.com/nighthunter/fire-bot
+After=graphical-session.target sound.target network.target
+Wants=sound.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/firefly chat
+Restart=on-failure
+RestartSec=5s
+Environment=PYTHONUNBUFFERED=1
+Environment=LC_ALL=C.UTF-8
+StandardOutput=journal
+StandardError=journal
+Nice=-5
+
+[Install]
+WantedBy=default.target

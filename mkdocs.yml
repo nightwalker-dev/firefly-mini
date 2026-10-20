@@ -1,0 +1,39 @@
+site_name: Firefly Mini Documentation
+site_description: Autonomous Cyber-Cat Desktop Assistant & Terminal Defense Sentinel for Linux
+site_author: Firefly Team
+site_url: https://nighthunter.github.io/fire-bot
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: cyan
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Threat Model: threat_model.md
+  - Plugin Guide: plugins.md
+  - Changelog: changelog.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables

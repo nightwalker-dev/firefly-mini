@@ -1,0 +1,20 @@
+{
+  "include": [
+    "src",
+    "tests",
+    "core",
+    "system",
+    "voice",
+    "input_control",
+    "ui",
+    "plugins",
+    "main.py"
+  ],
+  "extraPaths": [
+    "src",
+    "."
+  ],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.10"
+}
